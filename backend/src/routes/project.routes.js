@@ -23,14 +23,14 @@ router.get("/:id",(req,res)=>{
     });
 });
 
-router.post("/",()=>{
+router.post("/",(req,res)=>{
     const project = req.body;
     res.status(201).json({
         message : "project created"
     });
 });
 
-router.delete("/:id",()=>{
+router.delete("/:id",(req,res)=>{
     const id = Number(req.params.id);
 
     if (!Number.isInteger(id) || id <= 0) {
